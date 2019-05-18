@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MIfare1kTest_3
 {
@@ -19,6 +15,39 @@ namespace MIfare1kTest_3
 
             for (int i = 0; i < len; i++)
                 bout[i] = (byte) str[i];
+
+            return bout;
+        }
+
+        public static byte[] ToArrayByte32(string str)
+        {
+            byte[] bout = new byte[32];
+            Array.Clear(bout, 0, 32);
+
+            for (int i = 0; i < str.Length; i++)
+                bout[i] = (byte)str[i];
+
+            return bout;
+        }
+
+        public static byte[] ToArrayByte48(string str)
+        {
+            byte[] bout = new byte[48];
+            Array.Clear(bout, 0, 48);
+
+            for (int i = 0; i < str.Length; i++)
+                bout[i] = (byte) str[i];
+
+            return bout;
+        }
+
+        public static byte[] ToArrayByte64(string str)
+        {
+            byte[] bout = new byte[64];
+            Array.Clear(bout, 0, 64);
+
+            for (int i = 0; i < str.Length; i++)
+                bout[i] = (byte)str[i];
 
             return bout;
         }
